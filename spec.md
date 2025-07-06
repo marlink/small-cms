@@ -12,11 +12,12 @@ Create a simple HTML page that displays images in a 3x3 grid layout as tiles wit
 - **Responsive**: Ensure the layout works on different screen sizes
 
 ### Image Source
-- **Location**: Images will be loaded from `assets/photos/Home/`
-- **Subdirectories**: 
-  - `One-Neutral/`
-  - `Two-Spice/`
-  - `Three-Hot/`
+- **Location**: Images are loaded from three folders inside `assets/photos/home/`:
+  - `one/`
+  - `two/`
+  - `three/`
+- **Folder Names**: All folder names are lowercase
+- **Mixing**: The gallery always displays a mix of images from all three folders, distributed evenly across the grid
 - **Format**: Support common image formats (JPG, PNG, WebP)
 
 ### Technical Specifications
@@ -27,15 +28,18 @@ Create a simple HTML page that displays images in a 3x3 grid layout as tiles wit
   - Responsive images that maintain aspect ratio
   - Hover effects for better user interaction
   - Loading states for better UX
+  - **Lazy Loading**: Images are loaded only as they come into view for better performance
 
 ### Features
-- [ ] 3x3 image grid layout
-- [ ] Black background theme
-- [ ] Shadcn CSS styling
-- [ ] Responsive design
-- [ ] Image hover effects
-- [ ] Loading states
-- [ ] Error handling for missing images
+- [x] 3x3 image grid layout
+- [x] Black background theme
+- [x] Shadcn CSS styling
+- [x] Responsive design
+- [x] Image hover effects
+- [x] Loading states
+- [x] Error handling for missing images
+- [x] **Lazy loading** for images
+- [x] Always a mix of images from all three folders
 
 ### File Structure
 ```
@@ -45,13 +49,12 @@ Small-CMS/
 │   └── main.css
 ├── scripts/
 │   └── main.js
-├── assets/
-│   └── photos/
-│       └── Home/
-│           ├── One-Neutral/
-│           ├── Two-Spice/
-│           └── Three-Hot/
-└── spec.md
+└── assets/
+    └── photos/
+        └── home/
+            ├── one/
+            ├── two/
+            └── three/
 ```
 
 ## Implementation Notes
@@ -63,6 +66,6 @@ Small-CMS/
 
 ## Future Enhancements
 - Image lightbox/modal on click
-- Lazy loading for better performance
+- Lazy loading for better performance (implemented)
 - Image filtering by category
 - Admin interface for image management
